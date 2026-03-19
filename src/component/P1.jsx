@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios"
 import P2 from './P2';
 import P3 from './P3';
+import PaginationRounded from './P4';
 
 const P1 = () => {
 
@@ -59,11 +60,12 @@ const P1 = () => {
             </div>
             <div className='flex justify-center items-center gap-4 my-5'>
                 <button onClick={() => {
-                    if(i>1) setI(c => c-1)
+                    if(i>1) setI(v => v-1)
                 }} className={`btn btn-warning font-bold ${i===1? "opacity-50": "opacity-100"}`}>Prev</button>
                 <h1>Page {i}</h1>
-                <button onClick={() => setI(c => c+1)} className='btn btn-warning font-bold'>Next</button>
+                <button onClick={() => setI(v => v+1)} className='btn btn-warning font-bold'>Next</button>
             </div>
+            <PaginationRounded page={i} setPage={setI} count={10}></PaginationRounded>
         </div>
     );
 };
