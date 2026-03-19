@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
 import P2 from './P2';
+import P3 from './P3';
 
 const P1 = () => {
 
@@ -30,13 +31,25 @@ const P1 = () => {
 
     return (
         <div className='max-w-[90%] mx-auto my-7'>
-            {/* <div className='my-7 flex justify-center'>
-                <button onClick={a} className='btn btn-accent'>Click</button>
-            </div> */}
+            <div className='my-7 flex justify-center'>
+                <P3></P3>
+
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box">
+                <h3 className="font-bold text-lg text-center">JS Modal</h3>
+                <p className="py-4 text-center">You have the opened this modal Successfully!!!!🌃🌃🌃</p>
+                <div className="modal-action">
+                <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn btn-error">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
+            </div>
             {/* <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {user}
             </div> */}
-            <h1 className='text-4xl font-bold bg-green-600 rounded-full px-3 py-1 fixed'>{i}</h1>
             <div className='flex justify-center flex-wrap gap-5'>
                 {
                     c.length===0 ? 
